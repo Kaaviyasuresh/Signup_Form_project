@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/847/847969.png" type="image/png">
+   <meta name="description" content="It is a simple signup pages desgined by kaaviya.">
+  <link rel="stylesheet"  href="style.css">
+    </head>
+    <body>
+  <div class="c1">
+  <header>
+   
+        <h1 id="h1">Signup</h1>
+    </header>
+    <main>
+        <form action="/submit" method="POST">
+
+            <input type="text" id="FullName" name="FullName"  placeholder="FullName">
+               <br>
+            <input type="email" id="Email" name="Email"  placeholder="Email">
+                 <br>
+            <input type="password" id="Password" name="Password" placeholder="Password" required>
+                 <br>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+
+  <br>
+            <input type="text" id="dob" name="dob" placeholder="mm/dd/yyyy">
+             <br>
+             <br>
+           <input type="radio" id="student" name="employment" value="student">
+          <label for="student" class="s1">Student</label>
+           <input type="radio" id="Employee" name="employment" value="Employee">
+          <label for="Employee"  class="e1">Employee</label><br>
+         <br> 
+      <label>
+    <input type="checkbox" name="agree" required class="a1">
+    I agree to all terms and conditions
+  </label>
+      <br>
+      <div class="f1">
+      <button type="submit" class="b1">Signup</button>
+      </div>
+        </form>
+    </main>
+    <footer >
+  <p>© 2025 MyWebsite. All rights reserved.</p>
+
+    </footer>
+    </div>
+</body>
+</html>
