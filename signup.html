@@ -43,6 +43,29 @@
       <button type="submit" class="b1">Signup</button>
       </div>
         </form>
+        <script>
+  const emailInput = document.getElementById('Email');
+  const emailError = document.getElementById('emailError');
+  const passwordInput = document.getElementById('Password');
+  const passwordError = document.getElementById('passwordError');
+  const form = document.getElementById('signupForm');
+
+  emailInput.addEventListener('input', () => {
+    emailError.style.display = emailInput.checkValidity() ? 'none' : 'inline';
+  });
+
+  passwordInput.addEventListener('input', () => {
+    const strongPwd = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    passwordError.style.display = strongPwd.test(passwordInput.value) ? 'none' : 'inline';
+  });
+
+  form.addEventListener('submit', e => {
+    if (!emailInput.checkValidity() || passwordError.style.display === 'inline') {
+      e.preventDefault();
+      alert('Fix errors before submitting.');
+    }
+  });
+</script>
     </main>
     <footer >
   <p>© 2025 MyWebsite. All rights reserved.</p>
